@@ -10,6 +10,15 @@
   font-weight: 900;
   -webkit-text-stroke: 2px black;
 }
+.reset {
+  border: 1px #ffd952 solid;
+  border-radius: 20px;
+  background-color: #b998ff;
+  &:hover {
+    filter: hue-rotate(300deg);
+    transform: scale(0.97);
+  }
+}
 .board {
   display: flex;
   flex-wrap: wrap;

@@ -8,7 +8,8 @@ class App extends React.Component {
     this.state = {
       cells: Array(9).fill(),
       xTurn: true,
-    }
+    };
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleClick(i) {
@@ -30,6 +31,13 @@ class App extends React.Component {
     )
   }
 
+  handleReset() {
+    this.setState({
+      cells: Array(9).fill(),
+      xTurn: true,
+    });
+  }
+
   render() {
     const winner = getWinner(this.state.cells);
     const player = this.state.xTurn ? '🌴' : '🌊';
@@ -37,6 +45,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="title">tic tac toe</h1>
+        <button className="reset" onClick={this.handleReset}>Reset</button>
         <h3 className="info">{winner ? `${winner} wins!` : `Its ${player}'s turn`}</h3>
         <div className="board">
           {this.renderCell(0)}
