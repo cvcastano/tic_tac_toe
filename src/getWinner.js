@@ -1,4 +1,4 @@
-function CalculateWinner(cells) {
+function getWinner(cells) {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -18,4 +18,4 @@ function CalculateWinner(cells) {
     return null;
   }
 
-  export default CalculateWinner;
+  export default getWinner;
