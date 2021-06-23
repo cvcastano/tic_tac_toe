@@ -2,6 +2,7 @@ import React from "react";
 import './App.scss';
 import Cell from './Cell';
 import getWinner from "./getWinner";
+
 class App extends React.Component {
   constructor(props) {
     super(props);

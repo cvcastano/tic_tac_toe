@@ -6,4 +6,4 @@ function Cell(props) {
     )
 }
 
-export default Cell; 
+export default Cell;
