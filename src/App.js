@@ -6,14 +6,18 @@ class App extends React.Component {
     super(props);
     this.state = {
       cells: Array(9).fill(),
+      xTurn: true, 
     }
   }
 
   handleClick(i) {
     console.log('Me han clickado', i)
     const cells = this.state.cells.slice();
-    cells[i] = 'X';
-    this.setState({cells: cells});
+    cells[i] = this.state.xTurn ? 'x' : 'o';
+    this.setState({
+      cells: cells,
+      xTurn: !this.state.xTurn,
+    });
   }
 
   renderCell(i) {
