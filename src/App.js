@@ -11,6 +11,9 @@ class App extends React.Component {
 
   handleClick(i) {
     console.log('Me han clickado', i)
+    const cells = this.state.cells.slice();
+    cells[i] = 'X';
+    this.setState({cells: cells});
   }
 
   renderCell(i) {
