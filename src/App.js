@@ -7,14 +7,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       cells: Array(9).fill(),
-      xTurn: true, 
+      xTurn: true,
     }
   }
 
   handleClick(i) {
     console.log('Me han clickado', i)
     const cells = this.state.cells.slice();
-    if (CalculateWinner(cells) || cells[i]) return; 
+    if (CalculateWinner(cells) || cells[i]) return;
     cells[i] = this.state.xTurn ? 'x' : 'o';
     this.setState({
       cells: cells,
@@ -32,11 +32,12 @@ class App extends React.Component {
   }
 
   render() {
-
+    const player = this.state.xTurn ? 'x' : 'o';
 
     return (
       <div className="App">
         <h1 className="title">tic tac toe</h1>
+        <h3>{`Its ${player}'s turn`}</h3>
         <div className="board">
           {this.renderCell(0)}
           {this.renderCell(1)}
