@@ -31,12 +31,13 @@ class App extends React.Component {
   }
 
   render() {
+    const winner = getWinner(this.state.cells);
     const player = this.state.xTurn ? 'x' : 'o';
 
     return (
       <div className="App">
         <h1 className="title">tic tac toe</h1>
-        <h3>{`Its ${player}'s turn`}</h3>
+        <h3>{winner ? `${winner} wins!` : `Its ${player}'s turn`}</h3>
         <div className="board">
           {this.renderCell(0)}
           {this.renderCell(1)}
