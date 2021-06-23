@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   color: white;
+  @media all and (min-width: 768px) {
+    font-size: 50px;
+  }
 }
 .title {
   font-weight: 900;
@@ -14,6 +17,10 @@
   border: 1px #ffd952 solid;
   border-radius: 20px;
   background-color: #b998ff;
+  @media all and (min-width: 768px) {
+    font-size: 30px;
+    padding: 8px;
+  }
   &:hover {
     filter: hue-rotate(300deg);
     transform: scale(0.97);
@@ -23,10 +30,18 @@
   display: flex;
   flex-wrap: wrap;
   width: 150px;
+  @media all and (min-width: 768px) {
+    width: 300px;
+  }
 }
 .cell {
   width: 50px;
   height: 50px;
   background-color: #ffd952;
   border: 1px solid #b998ff;
+  @media all and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
 }
