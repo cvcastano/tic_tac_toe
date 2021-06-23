@@ -2,6 +2,12 @@ import React from "react";
 import './App.scss';
 import Cell from './Cell';
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cells: Array(9).fill(),
+    }
+  }
 
   handleClick(i) {
     console.log('Me han clickado', i)
@@ -9,12 +15,11 @@ class App extends React.Component {
 
   renderCell(i) {
     return (
-      <Cell 
-      onClick={() => this.handleClick(i)} 
+      <Cell
+        onClick={() => this.handleClick(i)}
+        value={this.state.cells[i]}
       />
-     
     )
-    
   }
 
   render() {
