@@ -1,6 +1,6 @@
-function Cell() {
+function Cell(props) {
     return (
-        <button className="cell">
+        <button className="cell" onClick={props.onClick}>
 
         </button>
     )
