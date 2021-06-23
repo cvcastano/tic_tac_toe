@@ -14,7 +14,7 @@ class App extends React.Component {
   handleClick(i) {
     const cells = this.state.cells.slice();
     if (getWinner(cells) || cells[i]) return;
-    cells[i] = this.state.xTurn ? 'x' : 'o';
+    cells[i] = this.state.xTurn ? '🌴' : '🌊';
     this.setState({
       cells: cells,
       xTurn: !this.state.xTurn,
@@ -32,7 +32,7 @@ class App extends React.Component {
 
   render() {
     const winner = getWinner(this.state.cells);
-    const player = this.state.xTurn ? 'x' : 'o';
+    const player = this.state.xTurn ? '🌴' : '🌊';
 
     return (
       <div className="App">
@@ -49,7 +49,6 @@ class App extends React.Component {
           {this.renderCell(8)}
           {this.renderCell(9)}
         </div>
-
       </div>
     )
   };
