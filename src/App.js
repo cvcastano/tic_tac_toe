@@ -1,6 +1,7 @@
 import React from "react";
 import './App.scss';
 import Cell from './Cell';
+import CalculateWinner from "./CalcualateWinner";
 class App extends React.Component {
   constructor(props) {
     super(props);
