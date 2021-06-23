@@ -7,13 +7,29 @@ class App extends React.Component {
     console.log('Me han clickado')
   }
 
+  renderCell() {
+    return (
+      <Cell onClick={this.handleClick} />
+    )
+  }
+
   render() {
 
 
     return (
       <div className="App">
         <h1 className="title">tic tac toe</h1>
-        <Cell onClick={this.handleClick} />
+        <div className="board">
+          {this.renderCell()}
+          {this.renderCell()}
+          {this.renderCell()}
+          {this.renderCell()}
+          {this.renderCell()}
+          {this.renderCell()}
+          {this.renderCell()}
+          {this.renderCell()}
+          {this.renderCell()}
+        </div>
 
       </div>
     )
