@@ -14,6 +14,7 @@ class App extends React.Component {
   handleClick(i) {
     console.log('Me han clickado', i)
     const cells = this.state.cells.slice();
+    if (CalculateWinner(cells) || cells[i]) return; 
     cells[i] = this.state.xTurn ? 'x' : 'o';
     this.setState({
       cells: cells,
