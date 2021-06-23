@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cells: Array(9).fill(),
+      cells: Array(9).fill(null),
       xTurn: true,
     };
     this.handleReset = this.handleReset.bind(this);
