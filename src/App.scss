@@ -1,22 +1,29 @@
 .App {
-  padding: 50px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  @media all and (max-height: 420px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
   @media all and (min-width: 768px) {
     font-size: 50px;
   }
 }
 .title {
+  font-size: 60px;
   font-weight: 900;
   -webkit-text-stroke: 2px black;
 }
 .reset {
-  border: 1px #ffd952 solid;
+  margin: 25px 0;
+  border: 2px #ffd952 solid;
   border-radius: 20px;
   background-color: #b998ff;
+  font-size: 30px;
   @media all and (min-width: 768px) {
     font-size: 30px;
     padding: 8px;
@@ -26,19 +33,24 @@
     transform: scale(0.97);
   }
 }
+.info {
+  font-size: 40px;
+}
 .board {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  width: 150px;
+  width: 210px;
   @media all and (min-width: 768px) {
     width: 300px;
   }
 }
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   background-color: #ffd952;
   border: 1px solid #b998ff;
+  font-size: 30px;
   @media all and (min-width: 768px) {
     width: 100px;
     height: 100px;

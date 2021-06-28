@@ -45,19 +45,23 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1 className="title">tic tac toe</h1>
-        <button className="reset" onClick={this.handleReset}>Reset</button>
-        <h3 className="info">{winner ? `${winner} wins!` : `Its ${player}'s turn`}</h3>
-        <div className="board">
-          {this.renderCell(0)}
-          {this.renderCell(1)}
-          {this.renderCell(2)}
-          {this.renderCell(3)}
-          {this.renderCell(4)}
-          {this.renderCell(5)}
-          {this.renderCell(6)}
-          {this.renderCell(7)}
-          {this.renderCell(8)}
+        <div>
+          <h1 className="title">tic tac toe</h1>
+          <button className="reset" onClick={this.handleReset}>Reset</button>
+        </div>
+        <div>
+          <h3 className="info">{winner ? `${winner} wins!` : `Its ${player}'s turn`}</h3>
+          <div className="board">
+            {this.renderCell(0)}
+            {this.renderCell(1)}
+            {this.renderCell(2)}
+            {this.renderCell(3)}
+            {this.renderCell(4)}
+            {this.renderCell(5)}
+            {this.renderCell(6)}
+            {this.renderCell(7)}
+            {this.renderCell(8)}
+          </div>
         </div>
       </div>
     )
